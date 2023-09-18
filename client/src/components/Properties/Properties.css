@@ -2,6 +2,7 @@
     height: 50%;
     width: 50%;
     margin-top: 30rem;
+    margin-left: 30%;
 }
 
 .Properties_wrapper {
@@ -10,7 +11,7 @@
     margin: 0 auto;
 }
 
-.properties_titles {
+.Properties_titles {
     margin-top: 5rem;
     display: flex;
     align-items: center;

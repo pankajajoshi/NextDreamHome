@@ -75,22 +75,22 @@ propertyController.get("/find/my-properties", verifyToken, async (req, res) => {
   }
 });
 
-// fetch bookmarked yachts
-propertyController.get(
-  "/find/bookmarked-properties",
-  verifyToken,
-  async (req, res) => {
-    try {
-      const properties = await Property.find({
-        bookmarkedUsers: { $in: [req.user.id] },
-      });
+// // fetch bookmarked yachts
+// propertyController.get(
+//   "/find/bookmarked-properties",
+//   verifyToken,
+//   async (req, res) => {
+//     try {
+//       const properties = await Property.find({
+//         bookmarkedUsers: { $in: [req.user.id] },
+//       });
 
-      return res.status(200).json(properties);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-);
+//       return res.status(200).json(properties);
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   }
+// );
 
 // TODO FETCH INDIVIDUAL PROPERTY
 propertyController.get("/find/:id", async (req, res) => {

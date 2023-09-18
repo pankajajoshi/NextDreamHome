@@ -4,6 +4,7 @@ export const arrPriceRanges = [
   "200000-300000",
   "300000-400000",
   "400000-500000",
+  "1000000-4000000",
 ];
 
 export const priceRangeToIndex = (priceRange) => {

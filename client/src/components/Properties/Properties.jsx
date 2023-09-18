@@ -108,7 +108,7 @@ const Properties = () => {
         </div>
         {filteredProperties?.length > 0 ? (
           <>
-            <div className="properties_titles">
+            <div className="Properties_titles">
               <h5>Selected properties</h5>
               <h2>Property you may like</h2>
             </div>
@@ -131,7 +131,7 @@ const Properties = () => {
                         {property.beds} <FaBed className="icon" />
                       </span>
                       <span>
-                        {property.sqfeet} square meters
+                        {property.sqfeet} square feet
                         <FaSquareFull className="icon" />
                       </span>
                     </div>
