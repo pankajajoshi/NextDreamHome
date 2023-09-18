@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AiOutlineFileImage } from "react-icons/ai";
 import { useNavigate, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import classes from "./Signup.css";
+import "./Signup.css";
 import { register } from "../../redux/authSlice";
 
 const Signup = () => {
@@ -57,10 +57,10 @@ const Signup = () => {
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
+    <div className="Signup_container">
+      <div className="signup_wrapper">
         <h2>Sign Up</h2>
-        <form onSubmit={handleRegister}>
+        <form className="signup_form" onSubmit={handleRegister}>
           <input
             type="text"
             name="username"

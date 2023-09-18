@@ -1,21 +1,21 @@
 import React from "react";
-import classes from "./Footer.css";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer>
-      <div className={classes.wrapper}>
-        <div className={classes.col}>
+      <div className="footer_wrapper">
+        <div className="foot_col">
           <h2>Find Dream Home</h2>
           <p>Dream Home Project</p>
         </div>
-        <div className={classes.col}>
+        <div className="foot_col">
           <h2>Contacts</h2>
-          <span>Phone: +123 456 789</span>
+          <span>Phone: +890 000 000</span>
           <span>LinkedIn: </span>
-          <span>GitHub: WebDevMania</span>
+          <span>GitHub: Pankaja </span>
         </div>
-        <div className={classes.col}>
+        <div className="foot_col">
           <h2>Location</h2>
           <span>State: Virginia</span>
           <span>City: Fairfax</span>

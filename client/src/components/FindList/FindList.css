@@ -1,5 +1,5 @@
-.container{
-    height: calc(100vh - 60px);
+.Find_container{
+    height:300%;
     width: 100%;
     background-image: url('../../assets/estate.png');
     background-size: cover;
@@ -7,31 +7,32 @@
     background-blend-mode: darken;
 }
 
-.wrapper{
-    max-width: 1180px;
+.Find_wrapper{
+    max-width: 980px;
     margin: 0 auto;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 30%;
 }
 
-.wrapper > h2{
+.Find_wrapper > h2{
     font-size: 46px;
     font-weight: bold;
-    color: #fff;
+    
     white-space: nowrap;
     margin-bottom: 2.5rem;
 }
 
-.wrapper > h5{
-    color: #efefef;
+.Find_wrapper > h5{
+    
     font-size: 36px; 
     margin-bottom: 3rem;
 }
 
-.wrapper > .options{
+.Find_wrapper > .options{
     width: 70%;
     background-color: #fff;
     padding: 1.25rem 1.5rem;
@@ -41,7 +42,7 @@
     align-items: center;
 }
 
-.options > select{
+.Find_options > select{
     height: 40px;
     min-width: 160px;
     max-width: 200px;
@@ -55,17 +56,17 @@
     cursor: pointer;
 }
 
-.options > select:first-child{
+.Find_options > select:first-child{
     color: #fff;
 }
 
-.options > .rangeInput{
+.Find_options > .rangeInput{
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.options > .searchIcon{
+.Find_options > .Find_searchIcon{
     padding: 0.6rem;
     width: 40px;
     height: 40px;

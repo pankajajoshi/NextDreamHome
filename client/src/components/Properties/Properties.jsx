@@ -7,7 +7,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from "react";
 import { properties } from "../../uitil/Data";
 import { arrPriceRanges } from "../../uitil/PriceRange";
-import classes from "../Properties/Properties.css";
+import "../Properties/Properties.css";
 import { useEffect } from "react";
 import { stateToIdx } from "../../uitil/States";
 
@@ -74,9 +74,9 @@ const Properties = () => {
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <div className={classes.options}>
+    <div className="Properties_container">
+      <div className="Properties_wrapper">
+        <div className="options">
           <select value={state?.type} name="type" onChange={handleState}>
             <option disabled>Select type</option>
             <option value="beach">Beach</option>
@@ -102,50 +102,47 @@ const Properties = () => {
             <option value="1">Maryland</option>
             <option value="2">Washington DC</option>
           </select>
-          <button className={classes.searchBtn}>
-            <AiOutlineSearch
-              className={classes.searchIcon}
-              onClick={handleSearch}
-            />
+          <button className="searchBtn">
+            <AiOutlineSearch className="searchIcon" onClick={handleSearch} />
           </button>
         </div>
         {filteredProperties?.length > 0 ? (
           <>
-            <div className={classes.titles}>
+            <div className="properties_titles">
               <h5>Selected properties</h5>
               <h2>Property you may like</h2>
             </div>
-            <div className={classes.properties}>
+            <div className="properties">
               {filteredProperties.map((property) => (
-                <div key={property.id} className={classes.property}>
+                <div key={property.id} className="property">
                   <Link
                     to={`/propertyDetail/${property._id}`}
-                    className={classes.imgContainer}
+                    className="imgContainer"
                   >
                     <img src={img1} alt="" />
                   </Link>
-                  <div className={classes.details}>
-                    <div className={classes.priceAndOwner}>
-                      <span className={classes.price}>$ {property.price}</span>
-                      <img src={person} className={classes.owner} />
+                  <div className="details">
+                    <div className="priceAndOwner">
+                      <span className="price">$ {property.price}</span>
+                      <img src={person} className="owner" />
                     </div>
-                    <div className={classes.moreDetails}>
+                    <div className="moreDetails">
                       <span>
-                        {property.beds} <FaBed className={classes.icon} />
+                        {property.beds} <FaBed className="icon" />
                       </span>
                       <span>
                         {property.sqfeet} square meters
-                        <FaSquareFull className={classes.icon} />
+                        <FaSquareFull className="icon" />
                       </span>
                     </div>
-                    <div className={classes.desc}>{property.decs}</div>
+                    <div className="desc">{property.decs}</div>
                   </div>
                 </div>
               ))}
             </div>
           </>
         ) : (
-          <h2 className={classes.noProperty}>
+          <h2 className="noProperty">
             We have no properties with the specified options.
           </h2>
         )}

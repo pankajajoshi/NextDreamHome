@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classes from "./Navbar.css";
+import "./Navbar.css";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -34,7 +34,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/signin");
+    navigate("/Signin");
   };
 
   const handleState = (e) => {
@@ -86,20 +86,21 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`${classes.container} ${isScrolled && classes.scrolled}`}>
-      <div className={classes.wrapper}>
-        <Link to="/" onClick={scrollToTop} className={classes.left}>
-          Real Estate <BsHouseDoor />
+    <div className="Navbar_container scrolled">
+      <div className="Navbar_wrapper">
+        <Link to="/" onClick={scrollToTop} className="Navbar_left">
+          NextDreamHome
+          <BsHouseDoor />
         </Link>
-        <ul className={classes.center}>
-          <li onClick={scrollToTop} className={classes.listItem}>
+        <ul className="Navbar_center">
+          <li onClick={scrollToTop} className="listItem">
             Home
           </li>
-          <li className={classes.listItem}>About</li>
-          <li className={classes.listItem}>Featured</li>
-          <li className={classes.listItem}>Contacts</li>
+          <li className="listItem">About</li>
+          <li className="listItem">Featured</li>
+          <li className="listItem">Contacts</li>
         </ul>
-        <div className={classes.right}>
+        <div className="Navbar_right">
           {!user ? (
             <>
               <Link to="/signup">Sign up</Link>
@@ -108,10 +109,10 @@ const Navbar = () => {
           ) : (
             <>
               <span>Hello {user.username}!</span>
-              <span className={classes.logoutBtn} onClick={handleLogout}>
+              <span className="logoutBtn" onClick={handleLogout}>
                 Logout
               </span>
-              <Link onClick={() => setShowForm(true)} className={classes.list}>
+              <Link onClick={() => setShowForm(true)} className="list">
                 List your property
               </Link>
             </>
@@ -119,9 +120,9 @@ const Navbar = () => {
         </div>
       </div>
       {showForm && (
-        <div className={classes.listPropertyForm} onClick={handleCloseForm}>
+        <div className="listPropertyForm" onClick={handleCloseForm}>
           <div
-            className={classes.listPropertyWrapper}
+            className="listPropertyWrapper"
             onClick={(e) => e.stopPropagation()}
           >
             <h2>List Property</h2>
@@ -152,7 +153,7 @@ const Navbar = () => {
               />
               <input
                 type="number"
-                placeholder="Sq. meters"
+                placeholder="Sq Feet"
                 name="sqmeters"
                 onChange={handleState}
               />
@@ -185,10 +186,7 @@ const Navbar = () => {
               </div>
               <button>List property</button>
             </form>
-            <AiOutlineClose
-              onClick={handleCloseForm}
-              className={classes.removeIcon}
-            />
+            <AiOutlineClose onClick={handleCloseForm} className="removeIcon" />
           </div>
         </div>
       )}

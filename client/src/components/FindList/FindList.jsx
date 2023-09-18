@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
-import classes from "./FindList.css";
+import "./FindList.css";
 
 const FindList = () => {
   const [type, setType] = useState("beach");
@@ -20,11 +20,11 @@ const FindList = () => {
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <h2>Let me find your dream place right now</h2>
-        <h5>Search the best selection of luxury real estate</h5>
-        <div className={classes.options}>
+    <div className="Find_container">
+      <div className="Find_wrapper">
+        <h2>Let us find your dream place right now</h2>
+        <h5>Search the best selection of properties </h5>
+        <div className="Find_options">
           <select onChange={(e) => setType(e.target.value)}>
             <option disabled>Select type</option>
             <option value="beach">Beach</option>
@@ -46,10 +46,7 @@ const FindList = () => {
             <option value="1">Maryland</option>
             <option value="2">Washington DC</option>
           </select>
-          <AiOutlineSearch
-            className={classes.searchIcon}
-            onClick={handleSearch}
-          />
+          <AiOutlineSearch className="Find_searchIcon" onClick={handleSearch} />
         </div>
       </div>
     </div>

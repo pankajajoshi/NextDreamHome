@@ -4,7 +4,16 @@ import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import { login } from "../../redux/authSlice";
 import { request } from "../../uitil/fetchApi";
-import classes from "../signin/Signin.css";
+import "../signin/Signin.css";
+
+import { toast } from "react-toastify";
+
+// Import toastify css file
+import "react-toastify/dist/ReactToastify.css";
+
+// toast-configuration method,
+// it is compulsory method.
+//toast.configure();
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -28,13 +37,13 @@ const Signup = () => {
       dispatch(login(data));
       navigate("/");
     } catch (error) {
-      console.error(error.message);
+      toast.error(error.message);
     }
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
+    <div className="Signin_container">
+      <div className="signin_wrapper">
         <h2>Sign in</h2>
         <form onSubmit={handleLogin}>
           <input

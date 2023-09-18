@@ -1,16 +1,16 @@
-.container {
-    height: 100%;
-    width: 100%;
-    margin-top: 2.5rem;
+.Properties_container {
+    height: 50%;
+    width: 50%;
+    margin-top: 30rem;
 }
 
-.wrapper {
+.Properties_wrapper {
     max-width: 1180px;
     height: 100%;
     margin: 0 auto;
 }
 
-.titles {
+.properties_titles {
     margin-top: 5rem;
     display: flex;
     align-items: center;
@@ -18,18 +18,18 @@
     gap: 0.5rem;
 }
 
-.titles>h5 {
+.properties_titles>h5 {
     color: #777;
     font-size: 18px;
     font-weight: 500;
 }
 
-.titles>h2 {
+.properties_titles>h2 {
     color: #333;
     font-size: 28px;
 }
 
-.wrapper>.options {
+.Properties_wrapper>.options {
     width: 100%;
     padding: 1.25rem 1.5rem;
     border-radius: 20px;

@@ -33,13 +33,18 @@ authController.post("/register", async (req, res) => {
 authController.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
+    console.log("user: " + user);
+    console.log("email: ", req.body.email);
     if (!user) {
-      throw new Error("Wrong credentials. Try again!");
+      throw new Error("Wrong email", req.body.email, " . Try again!");
     }
 
     const comparePass = await bcrypt.compare(req.body.password, user.password);
+    console.log("u entered: ", req.body.password);
+    console.log("actual password: ", user.password);
+
     if (!comparePass) {
-      throw new Error("Wrong credentials. Try again!");
+      throw new Error("Wrong Password : ", user.password, ". Try again!");
     }
 
     const { password, ...others } = user._doc;

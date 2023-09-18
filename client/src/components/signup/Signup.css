@@ -1,4 +1,4 @@
-.container {
+.Signup_container {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.wrapper {
+.signup_wrapper {
     height: 67.5vh;
     width: 27.5vw;
     border-radius: 20px;
@@ -22,21 +22,21 @@
     background-color: #fff;
 }
 
-.wrapper>h2 {
+.signup_wrapper>h2 {
     color: #171097;
     text-align: center;
     margin: 2.5rem 0;
     font-size: 36px;
 }
 
-form {
+.signup_form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 42px;
 }
 
-form>input {
+.signup_form>input {
     width: 50%;
     outline: none;
     border: none;

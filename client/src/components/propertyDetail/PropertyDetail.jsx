@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "../propertyDetail/PropertDetail.css";
+import "../propertyDetail/PropertDetail.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -24,12 +24,14 @@ const PropertyDetail = () => {
   console.log(propertyDetail);
 
   return (
-    <div className={classes.container}>
-      <div className={classes.left}>{/* img here of the property */}</div>
-      <div className={classes.right}>
-        <h2 className={classes.title}></h2>
-        <p className={classes.desc}></p>
-        <span className={classes.price}></span>
+    <div className="details_container">
+      <div className="details_wrapper">
+        <div className="deatils_left">{/* img here of the property */}</div>
+        <div className="details_right">
+          <h2 className="details_title"></h2>
+          <p className="desc"></p>
+          <span className="price"></span>
+        </div>
       </div>
     </div>
   );

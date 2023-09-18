@@ -31,8 +31,8 @@ function App() {
               <>
                 <Navbar />
                 <FindList />
-                <PopularProperties />
                 <FeaturedProperties />
+                <PopularProperties />
                 <Newsletter />
                 <Footer />
               </>
@@ -42,15 +42,15 @@ function App() {
           }
         />
         <Route
-          path="/signup"
+          path="/Signup"
           element={!user ? <Signup /> : <Navigate to="/" />}
         />
         <Route
-          path="/signin"
+          path="/Signin"
           element={!user ? <Signin /> : <Navigate to="/" />}
         />
         <Route
-          path="/properties"
+          path="/Properties"
           element={
             user ? (
               <>
@@ -73,7 +73,7 @@ function App() {
                 <Footer />
               </>
             ) : (
-              <Navigate to="/signin" />
+              <Navigate to="/Signin" />
             )
           }
         />

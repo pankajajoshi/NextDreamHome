@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./FeaturedProperties.css";
+import "./FeaturedProperties.css";
 import { FaBed, FaSquareFull } from "react-icons/fa";
 import person from "../../assets/person.jpeg";
 import img1 from "../../assets/estate.png";
@@ -9,97 +9,100 @@ import img4 from "../../assets/estate4.jpg";
 
 const FeaturedProperties = () => {
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <div className={classes.titles}>
+    <div className="Featured_container">
+      <div className="Featured_wrapper">
+        <div className="Featured_titles">
           <h5>Properties you may like</h5>
           <h2>Our Featured Properties</h2>
         </div>
-        <div className={classes.FeaturedProperties}>
-          <div className={classes.FeaturedProperty}>
-            <div className={classes.imgContainer}>
-              <img src={img1} alt="" />
+        <div className="featuredProperties">
+          <div className="featuredProperty">
+            <div className="imgContainer">
+              <img src={img1} alt="homeimg" />
             </div>
-            <div className={classes.details}>
-              <div className={classes.priceAndOwner}>
-                <span className={classes.price}>$ 390,000</span>
-                <img src={person} className={classes.owner} />
+            <div className="details">
+              <div className="priceAndOwner">
+                <span className="price">$ 990,000</span>
+                <img src={person} className="owner" />
               </div>
-              <div className={classes.moreDetails}>
+              <div className="moreDetails">
                 <span>
-                  2 <FaBed className={classes.icon} />
+                  4 <FaBed className="icon" />
                 </span>
                 <span>
-                  2500 square feet
-                  <FaSquareFull className={classes.icon} />
+                  3500 square feet
+                  <FaSquareFull className="icon" />
                 </span>
               </div>
-              <div className={classes.desc}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                asperiores doloribus totam quia sit inventore illo! Maiores
-                incidunt, corrupti veritatis repudiandae quaerat, reiciendis
-                expedita ex rem quisquam ab consequuntur pariatur!
+              <div className="desc">
+                Beautiful renovated home in the heart of the city of Virginia .
               </div>
             </div>
           </div>
-          <div className={classes.featuredProperty}>
-            <div className={classes.imgContainer}>
+          <div className="featuredProperty">
+            <div className="imgContainer">
               <img src={img2} alt="" />
             </div>
-            <div className={classes.details}>
-              <div className={classes.priceAndOwner}>
-                <span className={classes.price}>$ 390,000</span>
-                <img src={person} className={classes.owner} alt="realtor" />
+            <div className="details">
+              <div className="priceAndOwner">
+                <span className="price">$ 2,290,000</span>
+                <img src={person} className="owner" alt="realtor" />
               </div>
-              <div className={classes.moreDetails}>
+              <div className="moreDetails">
                 <span>
-                  2 <FaBed className={classes.icon} />
+                  6 <FaBed className="icon" />
                 </span>
                 <span>
-                  80.4 square meters <FaSquareFull className={classes.icon} />
+                  2500 square feet <FaSquareFull className="icon" />
                 </span>
               </div>
-              <div className={classes.desc}>Nice house located in Ger....</div>
+              <div className="desc">
+                Newly constructed Home just 40miles from DC
+              </div>
             </div>
           </div>
-          <div className={classes.featuredProperty}>
-            <div className={classes.imgContainer}>
+          <div className="featuredProperty">
+            <div className="imgContainer">
               <img src={img3} alt="" />
             </div>
-            <div className={classes.details}>
-              <div className={classes.priceAndOwner}>
-                <span className={classes.price}>$ 390,000</span>
-                <img src={person} className={classes.owner} alt="realtor" />
+            <div className="details">
+              <div className="priceAndOwner">
+                <span className="price">$ 750,000</span>
+                <img src={person} className="owner" alt="realtor" />
               </div>
-              <div className={classes.moreDetails}>
+              <div className="moreDetails">
                 <span>
-                  2 <FaBed className={classes.icon} />
+                  3 <FaBed className="icon" />
                 </span>
                 <span>
-                  80.4 square meters <FaSquareFull className={classes.icon} />
+                  3000 square feet <FaSquareFull className="icon" />
                 </span>
               </div>
-              <div className={classes.desc}>Nice house located in Ger....</div>
+              <div className="desc">
+                House that is not less than a dream at your favrotie beach
+              </div>
             </div>
           </div>
-          <div className={classes.featuredProperty}>
-            <div className={classes.imgContainer}>
+          <div className="featuredProperty">
+            <div className="imgContainer">
               <img src={img4} alt="" />
             </div>
-            <div className={classes.details}>
-              <div className={classes.priceAndOwner}>
-                <span className={classes.price}>$ 390,000</span>
-                <img src={person} className={classes.owner} alt="realtor" />
+            <div className="details">
+              <div className="priceAndOwner">
+                <span className="price">$ 980,000</span>
+                <img src={person} className="owner" alt="realtor" />
               </div>
-              <div className={classes.moreDetails}>
+              <div className="moreDetails">
                 <span>
-                  2 <FaBed className={classes.icon} />
+                  5 <FaBed className="icon" />
                 </span>
                 <span>
-                  80.4 square meters <FaSquareFull className={classes.icon} />
+                  6000 square feet <FaSquareFull className="icon" />
                 </span>
               </div>
-              <div className={classes.desc}>Nice house located in Ger....</div>
+              <div className="desc">
+                Great house with lots of renovation just for you
+              </div>
             </div>
           </div>
         </div>
